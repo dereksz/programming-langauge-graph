@@ -1,24 +1,3 @@
-# Credits
-# Originally from http://rigaux.org/language-study/language-study.list
-# Built into `dot` file (http://rigaux.org/language-study/diagram.dot) 
-# per http://rigaux.org/language-study/diagram.html
-# And I suspect this goes back even further to the GraphViz sample version
-#
-# This governed by "Creative Commons Attribution-ShareAlike 4.0 International License"
-
-# Maintainer: Derek Slone-Zhen
-#
-# My intention was two-fold: add some more langauges;
-# have it orderred in a way that made it more human accessible / searchable.
-# To that end, I intend the file to be in three sections:
-# 1. Year the langauge or valguage-version was introduced, no links / lineage
-# 2. Single-langauge lineage; e.g. how Python or Fortran versions should be linked
-# 3. "Genesis" sets (yes, I was listening to Genesis when I wrote this!)
-#    These list the influences for the initial release of a language.
-# 4. I said 3 didn't I!!!  Well, may need something that isn't neatly covered by the above
-#    E.g. when a language significantly influences features brough into a new version of a language
-#    There's also stuff in this section that I';ve yet to migrate to #2 & #3
-
 digraph dd {
 
 {
@@ -88,24 +67,27 @@ node [ fontsize=30, style=filled ];
 { rank = same ; 2017 ; "JavaScript ES2017" [ fontsize=40 ] }
 
 # Single language lineages (alphabetical)
-"Algol 58" -> "Algol 60" [weight=3]
-"APL" -> "APL 2" [weight=3]
-"bash 2.0" -> "bash 3.0" [weight=3]
-"Quick Basic" -> "Visual Basic" [weight=3]
-"C 95" -> "C 99" [weight=3]
-"C#" -> "C# 2.0" [weight=3]
-"Fortran II" -> "Fortran IV" [weight=3]
-"Groovy" -> "Groovy 1" [weight=3]
-"Java 2" -> "Java 5" [weight=3]
-"JavaScript 1.7" -> "JavaScript ES2015" [weight=3] -> "JavaScript ES2016" -> "JavaScript ES2017" [weight=3]
+{
+edge [weight=3] 
+"Algol 58" -> "Algol 60"
+"APL" -> "APL 2"
+"bash 2.0" -> "bash 3.0"
+"Quick Basic" -> "Visual Basic"
+"C 95" -> "C 99"
+"C#" -> "C# 2.0"
+"Fortran II" -> "Fortran IV"
+"Groovy" -> "Groovy 1"
+"Java 2" -> "Java 5"
+"JavaScript 1.7" -> "JavaScript ES2015" -> "JavaScript ES2016" -> "JavaScript ES2017"
 "MATLAB" -> "PC-MATLAB"
-"OCaml" -> "OCaml 3.0" [weight=3]
-"Perl" -> "Perl 4" [weight=3]
-"Python 3.0" -> "Python 3.6" [weight=3]
-"ISO SQL" -> "SQL-92" [weight=3] -> "SQL-1999" [weight=3]
-"REXX 3.0" -> "Object REXX" [weight=3]
-"Scheme R4RS" -> "Scheme R5RS" [weight=3]
-"Smalltalk 74" -> "Smalltalk 76" [weight=3]
+"OCaml" -> "OCaml 3.0"
+"Perl" -> "Perl 4"
+"Python 3.0" -> "Python 3.6"
+"ISO SQL" -> "SQL-92" -> "SQL-1999"
+"REXX 3.0" -> "Object REXX"
+"Scheme R4RS" -> "Scheme R5RS"
+"Smalltalk 74" -> "Smalltalk 76"
+}
 
 
 # Influencers (esp for firts version of a langauge) alphabetical of target laguage (at the end)
